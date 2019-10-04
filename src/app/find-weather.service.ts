@@ -12,16 +12,13 @@ export class FindWeatherService {
   constructor(private http: HttpClient) {}
 
   gettingCoordinates(data) {
-    let MAPAPIKEY = "AIzaSyBOHSg83UpKyo7vjhjp20mG-4WZFPciT_w";
+    let MAPAPIKEY = "REPLACEGOOGLEAPI-KEY-HERE";
     return this.http.get(
       `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${data}&key=${MAPAPIKEY}`
     );
   }
 
   getWeatherToday(lat, long) {
-
-    
-    return this.http.get(
-      `http://localhost:3000/${lat}/${long}`);
+    return this.http.get(`http://localhost:3000/${lat}/${long}`);
   }
 }
