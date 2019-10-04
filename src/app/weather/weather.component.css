@@ -24,3 +24,14 @@
   background-image: url("../../assets/weather_icon.png");
   background-size: cover;
 }
+
+@media only screen and (max-width: 600px) {
+  .weather-section {
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-areas:
+      "searchbar"
+      "card"
+      "buttons";
+  }
+}
