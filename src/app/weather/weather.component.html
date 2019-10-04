@@ -1,0 +1,39 @@
+<div class="weather-section">
+  <form class="zipcode" (ngSubmit)='onSubmit()'>
+    <mat-form-field>
+      <input matInput placeholder="Type Zipcode" [(ngModel)]='form.zipcode' name='zipcode'>
+    </mat-form-field>
+    <button mat-raised-button color='primary' style="height: 40px; margin-top: 15px; margin-left:10px;">submit</button>
+  </form>
+  <div class="buttons">
+
+    <div *ngFor='let zip of buttonZipcodes'>
+      <button mat-raised-button fullWidth='true' color='accent' style="height: 40px; width:90%; margin:15px 10px;"
+        (click)="checkZip(zip.zipcode)">{{zip.city}}</button>
+
+    </div>
+  </div>
+
+  <!-- Main Card -->
+  <div class="example-card " *ngIf='currentData?.show==true'>
+
+    <mat-card class="animated fadeIn">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{currentData?.timezone}}</mat-card-title>
+        <mat-card-subtitle>Current Weather</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{currentData?.image}}" alt="Weather Picture">
+      <mat-card-content>
+        <h3 style="text-align:center; font-size: 3em;">{{currentData?.temperature}}˚F</h3>
+        <p style="text-align:center; color:lightslategray; font-size: 1.5em;"> {{currentData?.summary}} </p>
+        <p>Wind Speed: {{currentData?.windSpeed}}MPH</p>
+
+        <p>Humidity {{currentData?.humidity}}%</p>
+        <p>DewPoint {{currentData?.dewPoint}}%</p>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

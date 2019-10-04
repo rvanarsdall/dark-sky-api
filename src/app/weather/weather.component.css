@@ -1,0 +1,26 @@
+.weather-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    ". searchbar  ."
+    "buttons card  .";
+}
+
+.zipcode {
+  padding-left: 45px;
+  grid-area: searchbar;
+  width: 100%;
+}
+.buttons {
+  grid-area: buttons;
+}
+
+.example-card {
+  max-width: 500px;
+  grid-area: card;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
