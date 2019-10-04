@@ -24,7 +24,7 @@ export class WeatherComponent implements OnInit {
 
   buttonZipcodes = [
     { zipcode: 98433, city: "Fort Lewis, WA" },
-    { zipcode: 94203, city: "SanFrancisco, CA" },
+    { zipcode: 94203, city: "San Francisco, CA" },
     { zipcode: 80902, city: "Fort Carson, CO" },
     { zipcode: 42223, city: "Fort Campbell, KY" },
     { zipcode: 13602, city: "Fort Drum, NY" },

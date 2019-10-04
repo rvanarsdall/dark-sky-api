@@ -12,7 +12,7 @@ export class FindWeatherService {
   constructor(private http: HttpClient) {}
 
   gettingCoordinates(data) {
-    let MAPAPIKEY = "REPLACEGOOGLEAPI-KEY-HERE";
+    let MAPAPIKEY = "ADD-API-HERE-FOR-GOOGLE";
     return this.http.get(
       `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${data}&key=${MAPAPIKEY}`
     );
